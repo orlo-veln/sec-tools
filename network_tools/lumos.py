@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
 # imports
 import re
+import sys
 
 # data
-logfile = '/home/manjushri/scripts/test_data/fake_auth.log'
 
 # functions
 def rate_threat(count):
@@ -39,6 +40,7 @@ def lumos(logfile):
         else:
             user_counts[user] = 1
 
+
     print(f"Total lines read: {len(lines)}")
     print(f"Failed attempts found: {len(failed)}")
     print(f"Unique IPs: {len(ip_counts)}")
@@ -46,9 +48,10 @@ def lumos(logfile):
     for ip, count in ip_counts.items():
         rating = rate_threat(count)
         print(f"{ip:<20} attempts: {count:<5} threat: {rating}")
-    print()
-    print("Usernames tried:")
-    for user, count in user_counts.items():
-        print(f"  {user:<20} attempts:  {count}")     
+
 # run
-lumos(logfile)
+# run
+if len(sys.argv) < 2:
+    print("Usage: lumos <logfile>")
+else:
+    lumos(sys.argv[1])

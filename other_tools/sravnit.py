@@ -1,11 +1,9 @@
-# Imports (none)
+# Imports
+import sys
 # Data
-oldfile = '/home/manjushri/scripts/test_data/wtmp.txt'
-
-newfile = '/home/manjushri/scripts/test_data/wtmp_mod.txt'
 
 # Functions
-def stravnit (original, modified):
+def sravnit (original, modified):
 	with open (original, 'r') as f:
 		lines_a = set(f.readlines())
 
@@ -25,7 +23,11 @@ def stravnit (original, modified):
 
 # Run
 
-stravnit(oldfile, newfile)
+if len(sys.argv) < 3:
+	print("Usage: sravnit <original> <modified>")
+else:
+	sravnit(sys.argv[1], sys.argv[2])
+
 
 
 
