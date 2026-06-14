@@ -13,6 +13,8 @@ I've always heard the word Python floating around. I've even joked about it in t
 ### Netcheck.sh
 As a natural progression from lumos, I wanted a tool that checked the network in real time rather than relying on a log tool. It was almost like Lumos check last nights log files for zombies in the nightm while Netcheck.sh checks the local network for hosts and open ports.
 
-## Sravnit.py
+### Sravnit.py
 I'd been learning how to alter a log file directly to cover tracks. Being ruthlessly committed to defence, I wanted to create a script where we could compare two log files to check for deleted logs.
 
+### test tools
+test data and scripts that can be used to test the above tools.
