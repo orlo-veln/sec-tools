@@ -7,7 +7,7 @@ echo "================================"
 
 echo ""
 echo "==== YOUR IP ===="
-ip a | grep "inet" | grep -v "127.0.0.1"
+ip a | grep "inet " | grep -v "127.0.0.1"
 
 echo ""
 echo "==== GATEWAY ===="
@@ -15,7 +15,8 @@ ip route | grep default
 
 echo "" 
 echo "==== DEVICES ON NETWORK ===="
-nmap -sn 192.168.68.0/22 -oG /tmp/live_hosts.txt > /dev/null
+SUBNET=$(ip a | grep "inet " | grep -v "127.0.0.1" | awk '{print $2}' | head -n1)
+nmap -sn "$SUBNET" -oG /tmp/live_hosts.txt > /dev/null
 grep "Up" /tmp/live_hosts.txt | awk '{print $2}'
 
 echo ""
