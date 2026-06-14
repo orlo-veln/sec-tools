@@ -9,12 +9,12 @@ I wanted to understand these tools in a real environment so I built a home secur
 
 ## The Tools
 ### Lumos.py
-I've always heard the word Python floating around. I've even joked about it in the comedy fiction books I've produced in the past. So, I wanted to learn to read and understand Python. After messing around with some crude beginner scripts, I wanted to create a tool that took a logfile and measured the current threat level based on the number of failed login attempts. I called this number 'The number of zombies knocking on the windows.' Caude helped me create this script which was absolutely exhilerating. While this is very basic, it was my first real Python script and hence I have a soft spot for it.
+I've always heard the word Python floating around. I've even joked about it in the comedy fiction books I've produced in the past. So, I wanted to learn to read and understand Python. After messing around with some crude beginner scripts, I wanted to create a tool that took a logfile and measured the current threat level based on the number of failed login attempts. I called this number 'The number of zombies knocking on the windows.' Claude helped me create this script which was absolutely exhilarating. While this is very basic, it was my first real Python script and hence I have a soft spot for it.
 ### Netcheck.sh
-As a natural progression from lumos, I wanted a tool that checked the network in real time rather than relying on a log tool. It was almost like Lumos check last nights log files for zombies in the nightm while Netcheck.sh checks the local network for hosts and open ports.
+As a natural progression from lumos, I wanted a tool that checked the network in real time rather than relying on a log tool. It was almost like Lumos check last nights log files for zombies in the night while Netcheck.sh checks the local network for hosts and open ports.
 
 ### Sravnit.py
 I'd been learning how to alter a log file directly to cover tracks. Being ruthlessly committed to defence, I wanted to create a script where we could compare two log files to check for deleted logs.
 
-### test tools
+### Test Tools
 test data and scripts that can be used to test the above tools.
